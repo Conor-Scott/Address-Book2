@@ -8,6 +8,23 @@
 - REST Extension in VSCode to test database queries
 - MongoDB database to store the Addresses
 
+To run the code you'll need a mongoDB server instance running.
+
+You'll need to run the following lines on a terminal with node.js installed:
+
+- npm install express
+- npm install mongoose
+- npm install react
+- npx create-react-app
+
+and to run the express server:
+
+> npm run runDev
+
+and to run the react front end:
+
+> npm run start
+
 ### Displays Addresses with people's information
 
 <br>
