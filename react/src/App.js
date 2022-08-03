@@ -82,7 +82,7 @@ function App() {
   async function handleDeleteByID()
   {
     const newAddresses = [...addresses]
-    const result = newAddresses.filter(c => (c._id != IDInputField.current.value))
+    const result = newAddresses.filter(c => (c._id !== IDInputField.current.value))
     console.log(result)
     await axios.delete(`${API_URL}/${IDInputField.current.value}`)
     setAddresses(result)
@@ -95,7 +95,7 @@ function App() {
     const query = `${API_URL}/${firstLast}`
     console.log(query)
     const newAddresses = [...addresses]
-    const result = newAddresses.filter(c => (c.firstName != firstNameInputField.current.value) && (c.lastName != lastNameInputField))
+    const result = newAddresses.filter(c => (c.firstName !== firstNameInputField.current.value) && (c.lastName !== lastNameInputField))
     console.log(result)
     await axios.delete(`${API_URL}/${firstLast}`)
     setAddresses(result)
@@ -114,7 +114,7 @@ function App() {
       "image": imageInputField.current.value,
     }
     const newAddresses = [...addresses]
-    const result = newAddresses.filter(c => (c._id != IDInputField.current.value))
+    const result = newAddresses.filter(c => (c._id !== IDInputField.current.value))
     console.log(result)
     result.push(newAddress)
     await axios.patch(`${API_URL}/${IDInputField.current.value}`, newAddress)
