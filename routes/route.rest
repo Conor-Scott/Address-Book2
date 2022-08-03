@@ -1,0 +1,39 @@
+GET http://localhost:5000/addresses
+
+###
+
+POST http://localhost:5000/addresses
+Content-Type: application/json
+
+{
+    "firstName": "Conor",
+    "lastName": "Scott",
+    "email": "conorwscott93@gmail.com",
+    "phoneNumber": "(902) 237-9999",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/800px-Pierre-Person.jpg"
+}
+
+###
+
+GET http://localhost:5000/addresses/62ea7cc4b327fded13cb0a04
+
+###
+
+DELETE http://localhost:5000/addresses/62eab6ca89f17a8e292826b9
+
+###
+
+
+DELETE http://localhost:5000/addresses/Joe/Smith
+
+###
+PATCH http://localhost:5000/addresses/62ea7cc4b327fded13cb0a04
+Content-Type: application/json
+
+{
+    "firstName": "Conor",
+    "lastName": "Scott",
+    "email": "conorwscott95@gmail.com",
+    "phoneNumber": "(902) 237-0655",
+    "image": "link_to_image"
+}
